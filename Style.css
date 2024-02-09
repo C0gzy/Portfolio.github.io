@@ -1,0 +1,78 @@
+:root {
+    --BackgroundColour: #FF595A; /* #717171; Dark grey */
+    --TopBarColour: #001233;/* #ffbb6a; orange */
+}
+
+body {
+    background-color: var(--TopBarColour);
+    color: #FFFFFF;
+}
+
+#Link {
+    color: var(--BackgroundColour);
+    text-decoration:overline;
+    text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.TopBar {
+    background-color: var(--TopBarColour);
+    
+    height: 6vh;
+    width: 100vw;
+    left: 0%;
+    top: 0%;
+    color : #FFFFFF;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 5px solid #022059;
+}
+
+.TopBar-Left {
+    float: left;
+    position: absolute;
+    margin-left: 0vw;
+    width: 33vw;
+    top: 2dvh;
+}
+.TopBar-Right {
+    float: right;
+    position: absolute;
+    margin-left: 75%;
+    top: 2dvh;
+    width: 20vw;
+}
+
+.TopBar-Center {
+    position: absolute;
+    font-size: 20px;
+    margin-left: 30vw;
+    width: 40vw;
+    top: 2dvh;
+}
+
+.Title {
+    position: relative;
+    font-size: 35px;
+    top: 5dvh;
+    left: 43dvw;
+}
+
+.DescText {
+    color: #FFFFFF;
+    position: relative;
+    top: 3dvh;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+.GamesWorkedOn {
+    background-color: var(--BackgroundColour);
+    position: relative;
+    left: 9vw;
+    width: 80dvw;
+    height: 35dvh;
+    border-radius: 20px;
+}

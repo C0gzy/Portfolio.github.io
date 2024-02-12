@@ -123,17 +123,28 @@ body {
 .DescText {
     color: #FFFFFF;
     position: relative;
-    top: 3dvh;
+    top: 1dvh;
     text-align: center;
     font-size: 25px;
 }
 
+.bmc-btn-container {
+}
 
-.GamesWorkedOn {
-    background-color: var(--BackgroundColour);
+.grid-container-Gif {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4 , 1fr);
+    padding: 10px;
     position: relative;
-    left: 9vw;
-    width: 80dvw;
-    height: 35dvh;
-    border-radius: 20px;
+    width: 70dvw;
+    
+    top: 5dvh;
+    left: 15dvw;
+ 
+}
+
+.Gifimg {
+    max-width: 100%;
+    height: auto;
 }

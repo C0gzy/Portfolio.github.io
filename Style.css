@@ -14,11 +14,72 @@ body {
     text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
+.TopSection {
+    position: relative;
+    top: 3.75dvh;
+    left: -0.5%;
+    width: 98.9vw;
+    height: 100vh;
+    background-color: #022059;
+    
+    border-Top: 5px solid var(--TopBarColour);
+    background-image: linear-gradient(to bottom, #022059 , #022059, var(--TopBarColour))
+}
+
+.TopSectionText {
+    position: relative;
+    Font-Size: 80px;
+    width: 50dvw;
+    left: 15dvw;
+    top:20dvh;
+    opacity: 0;
+}
+
+.TopSectionText.is-loaded {
+
+    transition: opacity 5s;
+    opacity: 1;
+}
+
+#ProjectSquare {
+    /*background-color: var(--BackgroundColour);*/
+    border-radius: 20px;
+    width: 60dvw;
+    height: 30dvh;
+    padding-bottom:10vh;
+    margin-bottom: 25px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    padding: 10px;
+    position: relative;
+    width: 70dvw;
+    
+    top: 5dvh;
+    left: 18dvw;
+}
+
+.ImageDesc {
+    position: relative;
+    max-height: 25dvh;
+    max-width: 25dvh;
+    left: 60dvw;
+    top: -15dvh;
+}
+
+.Desc {
+    width: 80%;
+    position: relative;
+    left: 3dvw;
+}
+
 .TopBar {
     background-color: var(--TopBarColour);
     
     height: 6vh;
-    width: 100vw;
+    width: 98.9vw;
     left: 0%;
     top: 0%;
     color : #FFFFFF;

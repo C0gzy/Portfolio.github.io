@@ -148,3 +148,11 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+.Gifimg:hover {
+    z-index: 5;
+    position: relative;
+    left: -3dvw;
+    max-width: 150%;
+    height: auto;
+}

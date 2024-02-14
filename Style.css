@@ -6,6 +6,7 @@
 body {
     background-color: var(--TopBarColour);
     color: #FFFFFF;
+    font-family: "Arial Black";
 }
 
 #Link {
@@ -152,7 +153,7 @@ body {
 .Gifimg:hover {
     z-index: 5;
     position: relative;
-    left: -3dvw;
+    left: -2dvw;
     max-width: 150%;
     height: auto;
 }

@@ -29,7 +29,7 @@ body {
 
 .TopSectionText {
     position: relative;
-    Font-Size: 5dvw;
+    Font-Size: clamp(1dvw,4dvw,5dvw);
     width: 50dvw;
     left: 15dvw;
     top:20dvh;

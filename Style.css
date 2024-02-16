@@ -9,6 +9,16 @@ body {
     font-family: "Arial Black";
 }
 
+@keyframes FadeInAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 #Link {
     color: var(--BackgroundColour);
     text-decoration:overline;
@@ -16,6 +26,7 @@ body {
 }
 
 .TopSection {
+    
     position: relative;
     top: 3.75dvh;
     left: -0.5%;
@@ -27,19 +38,18 @@ body {
     background-image: linear-gradient(to bottom, #022059 , #022059, var(--TopBarColour))
 }
 
+
+
 .TopSectionText {
     position: relative;
-    Font-Size: clamp(1dvw,4dvw,5dvw);
+    Font-Size: clamp(2dvw,4dvw,5dvw);
     width: 50dvw;
     left: 15dvw;
     top:20dvh;
-    opacity: 0;
-}
-
-.TopSectionText.is-loaded {
-
-    transition: opacity 5s;
-    opacity: 1;
+    
+    animation: FadeInAnim ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 #ProjectSquare {
@@ -52,7 +62,8 @@ body {
 }
 
 .grid-container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: repeat(1 , 1fr);
     padding: 10px;
     position: relative;
@@ -65,7 +76,7 @@ body {
 .ImageDesc {
     position: relative;
     max-height: 25dvh;
-    max-width: 25dvh;
+    max-width: 10dvw;
     left: 60dvw;
     top: -15dvh;
 }
@@ -77,6 +88,7 @@ body {
 }
 
 .TopBar {
+    display: flex;
     background-color: var(--TopBarColour);
     
     height: 6vh;

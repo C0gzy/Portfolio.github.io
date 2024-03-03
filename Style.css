@@ -9,6 +9,10 @@ body {
     font-family: "Arial Black";
 }
 
+i {
+    font-size: 30px;
+}
+
 @keyframes FadeInAnim {
     0% {
         opacity: 0;
@@ -30,7 +34,7 @@ body {
     position: relative;
     top: 3.75dvh;
     left: -0.5%;
-    width: 98.9vw;
+    width: 100.9%;
     height: 100vh;
     background-color: #022059;
     
@@ -92,7 +96,7 @@ body {
     background-color: var(--TopBarColour);
     
     height: 6vh;
-    width: 98.9vw;
+    width: 99.9%;
     left: 0%;
     top: 0%;
     color : #FFFFFF;

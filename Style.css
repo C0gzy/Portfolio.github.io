@@ -66,9 +66,7 @@ i {
     /*background-color: var(--BackgroundColour);*/
     border-radius: 20px;
     width: 60dvw;
-    height: 30dvh;
-    padding-bottom:10vh;
-    margin-bottom: 25px;
+
 }
 
 .grid-container {

@@ -99,6 +99,9 @@ i {
 
 .TopBar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     background-color: var(--TopBarColour);
     
     height: 6vh;
@@ -114,26 +117,20 @@ i {
 }
 
 .TopBar-Left {
+    flex: 1;
     float: left;
-    position: absolute;
-    margin-left: 0vw;
     width: 33vw;
-    top: 2dvh;
 }
 .TopBar-Right {
+    flex: 1;
     float: right;
-    position: absolute;
-    margin-left: 75%;
-    top: 2dvh;
     width: 20vw;
 }
 
 .TopBar-Center {
-    position: absolute;
+    flex: 2;
     font-size: 20px;
-    margin-left: 30vw;
     width: 40vw;
-    top: 2dvh;
 }
 
 .Title {

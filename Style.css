@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    position: absolute;
     background-color: var(--Background);
     color: #FFFFFF;
     font-family: "Arial Black";

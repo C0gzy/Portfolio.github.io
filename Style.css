@@ -44,8 +44,7 @@ i {
     padding: 200px 10% 50px 10%;
     
     flex-direction: column;
-    left: -0.5%;
-    width: 100.9%;
+    width: 100vw;
     height: 100vh;
      /*
     background-color: #022059;
@@ -77,6 +76,13 @@ i {
     border-radius: 20px;
     width: 60dvw;
 
+
+}
+
+.ProjectText {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
 }
 
 .grid-container {
@@ -84,6 +90,7 @@ i {
     flex-direction: column;
     grid-template-columns: repeat(1 , 1fr);
     padding: 10px;
+    gap: 10px;
     position: relative;
     width: 70dvw;
     
@@ -92,17 +99,14 @@ i {
 }
 
 .ImageDesc {
-    position: relative;
-    max-height: 25dvh;
-    max-width: 10dvw;
-    left: 60dvw;
-    top: -15dvh;
+
+    max-width: 125px;
+    max-height: 125px;
+    
 }
 
 .Desc {
-    width: 80%;
     position: relative;
-    left: 3dvw;
 }
 
 .TopBar {

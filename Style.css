@@ -39,6 +39,10 @@ i {
     text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
+#Link:hover {
+    scale: 1.2;
+}
+
 .TopSection {
     
     display: flex;
@@ -72,6 +76,15 @@ i {
 .TopSectionDesc {
     Font-Size: 30px;
     width: 60%;
+}
+
+
+.ProjectTextTitle {
+    text-align: center;
+    font-size: 100px;
+    line-height: 0%;
+    margin: 5%;
+    color: #FF0094;
 }
 
 #ProjectSquare {
@@ -202,8 +215,19 @@ i {
     height: auto;
 }
 
+.FooterText {
+    position: relative;
+    margin: 10% 10% 5% 10%;
+    font-size: 20px;
+    text-align: center;
+}
+
 
 @media screen and (max-width: 992px) {
+    .ProjectTextTitle {
+        font-size: 50px;
+    }
+
     .Gifimg {
       width: 40%;
     }

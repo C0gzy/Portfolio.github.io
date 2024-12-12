@@ -76,7 +76,14 @@ i {
 .TopSectionDesc {
     Font-Size: 30px;
     width: 60%;
+    
+    opacity: 0.05;
+    animation: FadeInAnim ease 5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+
 
 
 .ProjectTextTitle {
@@ -91,7 +98,10 @@ i {
     /*background-color: var(--BackgroundColour);*/
     border-radius: 20px;
     width: 60dvw;
-
+    
+    animation: FadeInAnim linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
 
 }
 

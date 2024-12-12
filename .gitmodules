@@ -1,3 +1,6 @@
 [submodule "SubWebs/JavaScript-Marching-Square"]
 	path = SubWebs/JavaScript-Marching-Square
 	url = https://github.com/C0gzy/JavaScript-Marching-Squares
+[submodule "SubWebs/Comp1004WebsiteProject"]
+	path = SubWebs/Comp1004WebsiteProject
+	url = https://github.com/C0gzy/Comp1004WebsiteProject.git

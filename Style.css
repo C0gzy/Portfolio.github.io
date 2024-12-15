@@ -1,8 +1,10 @@
 :root {
     --Background: #202027;
+    --BackgroundHighlight: #383843;
     --Secondary: #FFFFFF;
     --BackgroundColour: #FF595A; /* #717171; Dark grey */
     --TopBarColour: #001233;/* #ffbb6a; orange */
+    --HighlightColour: #574FE8;
 }
 
 html {
@@ -46,13 +48,16 @@ i {
 .TopSection {
     
     display: flex;
-    padding: 200px 10% 50px 10%;
+    padding: 100px 10% 50px 10%;
     
     flex-direction: column;
+    
+    align-items: center;
     /*
     width: 100vw;
     */
-    height: 100vh;
+    height: 90vh;
+
      /*
     background-color: #022059;
    
@@ -68,7 +73,7 @@ i {
     Font-Size: clamp(4dvw,8dvw,10dvw);
     margin-bottom: 0px;
     
-    animation: FadeInAnim ease 5s;
+    animation: FadeInAnim ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -76,10 +81,11 @@ i {
 .TopSectionDesc {
     Font-Size: 30px;
     width: 60%;
+    text-align: center;
     
     opacity: 0.05;
-    animation: FadeInAnim ease 5s;
-    animation-delay: 0.5s;
+    animation: FadeInAnim ease 1s;
+    animation-delay: 0.1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -91,42 +97,149 @@ i {
     font-size: 100px;
     line-height: 0%;
     margin: 5%;
-    color: #FF0094;
+    color: #d2d2d2;
+    
 }
 
 #ProjectSquare {
     /*background-color: var(--BackgroundColour);*/
     border-radius: 20px;
-    width: 60dvw;
+  
+    display: flex;
+    flex-direction: column;
     
+    align-items: center;
+    background-color: var(--BackgroundHighlight);
+    height: 50vh;
+    gap: 5px;
+
+
+    /*
     animation: FadeInAnim linear;
     animation-timeline: view();
     animation-range: entry 0% cover 50%;
+    */
 
 }
 
 .ProjectText {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     gap: 25px;
 }
 
 .grid-container {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: repeat(1 , 1fr);
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(20rem, 1fr));
+    margin: 10%;
+    gap: 20px;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+
     justify-content: center;
     align-items: center;
-
-   
-    
     top: 5dvh;
     
 }
+
+.ProjectTags{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.ProjectTag {
+    display: flex;
+    align-items: center;
+    background-color: #2020273e;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    line-height: .25;
+    gap: 10px;
+}
+
+.Desc {
+    font-size: 17px;
+    width: 90%;
+}
+
+.ProjectLinkFlex {
+    display: flex;
+    width: 90%;
+    font-size: 20px;
+    
+}
+
+.fa-link {
+    font-size: 20px;
+}
+
+.ProjectLink {
+    display: flex;
+    align-items: center;
+    background-color: #2020273e;
+    border-radius: 10px;
+    padding: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.Technologies {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.TechRow {
+    display: grid;
+    grid-template-columns: repeat(3,  minmax(10rem, 1fr));
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.TechSquare {
+    display: flex;
+    align-items: center;
+    background-color: var(--BackgroundHighlight);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    color: #FFFFFF;
+    gap: 10px;
+}
+
+.TechSquare:hover {
+    background-color: #574fe858;
+    border: #FFFFFF .1px solid;
+}
+
+.TechImageBorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    width: 4rem;
+    height: 4rem;
+    background-color: #2020273e;
+}
+
+.TechImage {
+    max-width: 50px;
+    max-height: 50px;
+
+
+}
+
 
 .ImageDesc {
 
@@ -135,23 +248,19 @@ i {
     
 }
 
-.Desc {
-    position: relative;
-}
+
 
 .TopBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--Secondary);
-    
     
     height: 10vh;
     width: 100vw;
     min-width: 380px;
     left: 0%;
     top: 0%;
-    color : #FFFFFF;
+
     position: absolute;
     text-align: center;
     font-size: 60px;
@@ -275,6 +384,15 @@ footer {
       width: 100%;
     }
 
+    .TechRow {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .TechSquare {
+        font-size: 12px;
+    }
+
     .TopBar {
         font-size: 40px;
     }
@@ -305,9 +423,6 @@ footer {
         max-height: 62.5px;
     }
 
-    #ProjectSquare {
-        width: 90vw;
-    }
     
 }
 

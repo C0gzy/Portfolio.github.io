@@ -163,8 +163,9 @@ i {
 }
 
 .Desc {
-    font-size: 17px;
+    font-size: 13px;
     width: 90%;
+    height: 100px;
 }
 
 .ProjectLinkFlex {

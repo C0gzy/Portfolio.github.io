@@ -67,6 +67,22 @@ i {
     */
 }
 
+
+@-webkit-keyframes shine {
+    0%, 10% {
+      background-position: -1000px;
+    }
+    20% {
+      background-position: top left;
+    }
+    90% {
+      background-position: top right;
+    }
+    100% {
+      background-position: 1000px;
+    }
+}
+
 .ResumeLink {
     display: flex;
     align-items: center;
@@ -78,6 +94,10 @@ i {
    
    
     gap: 10px;
+}
+
+.ResumeLink:hover {
+    transform: scale(1.05);
 }
 
 .AResumeLink {
@@ -128,7 +148,7 @@ i {
     
     align-items: center;
     background-color: var(--BackgroundHighlight);
-    height: 55vh;
+    height: 60vh;
     gap: 5px;
     flex-wrap: wrap;
 
@@ -150,7 +170,7 @@ i {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit , minmax(22rem, 1fr));
     margin: 10%;
     gap: 20px;
     position: relative;
@@ -165,7 +185,7 @@ i {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    
+    margin-top: 10px;
     align-items: center;
     width: 90%;
 }
@@ -175,10 +195,17 @@ i {
     align-items: center;
     background-color: #2020273e;
     border-radius: 10px;
+    color: #c8c8c8;
     padding: 10px;
-    font-size: 15px;
+    font-size: .75rem;
     line-height: .25;
     gap: 10px;
+    border: #20202778 .1px solid;
+}
+
+.ProjectTag:hover {
+    background-color: #20202778;
+   
 }
 
 .Desc {
@@ -193,6 +220,10 @@ i {
     width: 90%;
     font-size: 20px;
     
+}
+
+.ProjectLink:hover {
+    background-color: #202027b9;
 }
 
 .fa-link {
@@ -409,6 +440,10 @@ footer {
     .TechRow {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+    }
+
+    #ProjectSquare {
+        height: 90vh;
     }
 
     .TechSquare {

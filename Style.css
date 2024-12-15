@@ -53,6 +53,7 @@ i {
     flex-direction: column;
     
     align-items: center;
+    
     /*
     width: 100vw;
     */
@@ -66,11 +67,28 @@ i {
     */
 }
 
+.ResumeLink {
+    display: flex;
+    align-items: center;
+    border: var(--HighlightColour) 1px solid;
+    border-radius: 10px;
+    background-color: #574fe824;
+    padding: 10px;
+    font-size: 30px;
+   
+   
+    gap: 10px;
+}
+
+.AResumeLink {
+    color: #FFFFFF;
+    text-decoration: none;
+}
 
 
 .TopSectionText {
 
-    Font-Size: clamp(4dvw,8dvw,10dvw);
+    Font-Size: clamp(10dvw,10dvw,10dvw);
     margin-bottom: 0px;
     
     animation: FadeInAnim ease 1s;
@@ -112,6 +130,7 @@ i {
     background-color: var(--BackgroundHighlight);
     height: 50vh;
     gap: 5px;
+    flex-wrap: wrap;
 
 
     /*
@@ -126,7 +145,7 @@ i {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    gap: 25px;
+   
 }
 
 .grid-container {
@@ -163,7 +182,7 @@ i {
 }
 
 .Desc {
-    font-size: 13px;
+    font-size: 16px;
     width: 90%;
     height: 100px;
 }
@@ -197,6 +216,7 @@ i {
     gap: 20px;
     justify-content: center;
     align-items: center;
+    margin: 15%;
     
 }
 
@@ -244,8 +264,8 @@ i {
 
 .ImageDesc {
 
-    max-width: 125px;
-    max-height: 125px;
+    max-width: 90%;
+    max-height: 30%;
     
 }
 
@@ -403,7 +423,7 @@ footer {
     }
 
     .TopSectionDesc {
-        width: 80%;
+        width: 100%;
         font-size: 20px;
     }
 
@@ -420,8 +440,7 @@ footer {
     }
 
     .ImageDesc {
-        max-width:  62.5px;
-        max-height: 62.5px;
+        max-height: 100px;
     }
 
     

@@ -1,0 +1,374 @@
+@font-face{
+    font-family: Koulen;
+    src: url("fonts/Koulen.ttf");
+}
+
+body{
+    background-color: #534F4B;
+}
+
+.TopBar {
+    /* Styles a top navigation bar. It uses flexbox for layout, positions it at the top of the page, and gives it a box shadow and background color. */
+    /* Size and position */
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+
+    
+
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 10vh;
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #ffbb6a;
+}
+
+.LeftBar {
+    /* Styles a sidebar on the left. It uses flexbox for layout and is floated to the left. */
+    display: flex;
+    float: left;
+    align-items: center;
+    
+}
+
+.RightBar {
+    /* Styles a sidebar on the right. It uses flexbox for layout and is floated to the right. */
+    display: flex;
+    float: right;
+    align-items: center;
+}
+
+.ImportExport {
+    /* Styles a section related to importing/exporting data buttons. It uses flexbox for layout and centers its content. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0% 0% 0% 0%;
+
+}
+
+.LabelImport {
+    /* Styles a label for the import feature. It uses the custom "Koulen" font and makes the text act as a clickable element. */
+    font-family: Koulen;
+    font-size: 20px;
+    margin: 0% 0% 0% 0%;
+    cursor: pointer;
+
+}
+
+.FilterButtonSumbit {
+    /* Styles a submit button for a filter feature. It sets a specific height for the button. */
+    height: 2.5vh;
+}
+
+.SearchBar {
+    /* Styles a search bar. It sets padding, font size, height, width, border radius, and box shadow. */
+    /* Size and position */
+    
+    padding: 0% 4%; 
+
+    font-size: 20px;
+
+    height: 5vh;
+    width: 160%;
+    border-radius: 90px;
+    outline: none;
+    border: 0px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);;
+}
+
+.SearchButton{
+ /* Styles a search button. It sets maximum and minimum width, positions it to the left, and makes it act as a clickable element. */
+    max-width: 8%;
+    left: 8%;
+
+    min-width: 2em;
+    min-height: 2em;
+
+    cursor: pointer;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0); 
+   
+}
+ 
+.Title{
+     /* Styles a title. centers the text, applies a text shadow, and uses the custom "Koulen" font. */
+    /* Make it so the text can't be selected */
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    height: 100%;
+    line-height: 1;
+    
+    /* Center the text and select font and size*/
+
+    margin: 0;
+    
+    /*margin-top: 0%;*/
+ 
+
+    text-shadow: -6px 4px 4px rgba(54, 52, 52, 0.385);
+    font-family: Koulen;
+    font-size: 100px;
+    
+
+ 
+ 
+   
+    border-top: 0;
+
+    
+}
+
+.FilterBar {
+    /* Styles a filter bar. It uses flexbox for layout and arranges its content in a column. */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Filter {
+    /* Styles a filter. It uses the custom "Koulen" font and sets a specific height. */
+    font-family: Koulen;
+    height: 50%;
+    
+}
+
+.CheckBoxes {
+    /* Styles a group of checkboxes. It uses flexbox for layout. */
+    display: flex;
+}
+
+.FilmDisplay {
+    /* Styles a section for displaying films. It uses flexbox for layout and arranges its content in a column. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.grid-container {
+/* Styles a grid container for displaying items. It sets a specific width and uses CSS Grid for layout. */
+
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fit , minmax(20rem , 1fr));
+
+    position: relative;
+    
+
+    
+}
+
+.grid-item { 
+    /* Styles an individual item in the grid. It sets padding, makes it act as a clickable element, and sets a specific z-index. */
+    z-index: 10;
+    padding: 20px;
+    cursor: pointer;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0); 
+
+
+
+
+}
+
+.Grid-Image {
+     /* Styles an image in the grid. It sets aspect ratio, box shadow, border radius, height, and width. */
+    aspect-ratio: 10 / 16;
+    box-shadow: -10px 10px 4px 0px rgba(0, 0, 0, 0.50);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+
+    min-width: 1em;
+    min-height: 1em;
+}
+
+.Grid-Image:hover {
+    /* Styles an image in the grid when it's hovered over. It scales the image up slightly. */
+    transform: scale(1.1);
+}
+
+.MovieContainer {
+    /* Styles a container for movie details. It uses flexbox for layout and sets a gap between items. */
+    display: flex;
+    gap: 5%;
+
+}
+
+.MovieDetails  {
+    /* Styles a section for movie details. It positions it relative to its container, sets a specific z-index, background color, width, height, and border radius. */
+    position: relative;
+    z-index: 500;
+    background-color: #ffbb6a;
+    width: 120%;
+    height: 50%;
+    
+    border-radius: 1vw;
+}
+
+.MovieDetailsImage {
+    /* Styles an image in the movie details. It sets aspect ratio, box shadow, border radius, position, height, width, and minimum width and height. */
+    aspect-ratio: 10 / 16;
+    box-shadow: -5px 5px 4px 0px rgba(0, 0, 0, 0.50);
+    border-radius: 10px;
+    position: relative;
+
+
+    height: 100%;
+    width: 15vh;
+    min-width: .1em;
+    min-height: .1em;
+}
+
+.MovieDetailsTitle {
+     /* Styles a title in the movie details. It positions it relative to its container, centers the text, applies a text shadow, and uses the custom "Koulen" font. */
+    position: relative;
+    margin-bottom: 0px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Koulen;
+    font-size: 240%;
+    font-style: normal;
+    font-weight: 400%;
+    line-height: normal;
+}
+
+
+.MovieDetailsRight {
+   /* Styles a section on the right in the movie details. It uses flexbox for layout and arranges its content in a column. */
+    display: flex;
+    flex-direction: column;
+}
+
+.MovieDetailsLeft {
+   /* Styles a section on the left in the movie details. It uses flexbox for layout and arranges its content in a column. */
+    display: flex;
+    flex-direction: column;
+}
+
+.MovieDetailsPlot {
+     /* Styles a plot in the movie details. It aligns the text to the left, uses the custom "Koulen" font, and sets a specific width, height, and overflow behavior. */
+    text-align: left;
+    font-family: Koulen;
+    white-space: pre-line;
+    position: relative;
+    font-size: 130%;
+    line-height: 1em;
+    /*
+    top: -50%;
+    left: 47%;
+    */
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.Rating {
+    /* Styles a rating in the movie details. It sets font size, uses the custom "Koulen" font, positions it relative to its container, aligns the text to the left, and sets white-space behavior. */
+    font-size: 110%;
+    font-family: Koulen;
+    line-height: 1em;
+    position: relative;
+    text-align: left;
+    white-space: pre-line;
+
+}
+
+
+
+.FavButton {
+   /* Styles a favorite button in the movie details. It positions it relative to its container and sets a specific z-index. */
+    position: relative;
+    z-index: 500;
+    top: 0%;
+}
+
+.Genres {
+    /* Styles a genres section in the movie details. It sets font size, uses the custom "Koulen" font, positions it relative to its container, centers the text, and sets white-space behavior. */
+    font-size: 110%;
+    font-family: Koulen;
+    line-height: 1em;
+    position: relative;
+    text-align: center;
+    white-space: pre-line;
+    /*
+    top: -63%;
+    left: 20%;
+    */
+}
+
+.DirectorAndActors {
+     /* Styles a section for director and actors in the movie details. It sets font size, uses the custom "Koulen" font, positions it relative to its container, aligns the text to the left, and sets white-space behavior. */
+    font-size: 110%;
+    font-family: Koulen;
+    line-height: 1em;
+    position: relative;
+    text-align: left;
+    white-space: pre-line;
+
+}
+
+#PrevNextBar {
+    /* Styles a bar for previous and next navigation. It uses flexbox for layout, positions it relative to its container, aligns and justifies its content to the center, and sets a gap between items. */
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+
+    width: 80%;
+    min-width: 10vw;
+    top : 5dvh;
+}
+
+.NextButton   {
+    /* Styles a next button. It floats it to the right, positions it relative to its container, makes it act as a clickable element, and sets a specific width, font size, border radius, and border. */
+    float: right;
+    width: 15vw;
+   
+    position: relative;
+    font-size: 4vmin;
+    cursor: pointer;
+    border-radius: 90px;
+    border: 0px;
+
+}
+
+.PrevButton {
+    /* Styles a previous button. It floats it to the left, positions it relative to its container, makes it act as a clickable element, and sets a specific width, minimum width, font size, border radius, and border. */
+    float: left;
+    position: relative;
+    cursor: pointer;
+    width: 15vw;
+    min-width: 10vw;
+    font-size: 4vmin;
+
+    border-radius: 90px;
+    border: 0px;
+}
+.PageNumber {
+    /* Styles a page number. It positions it relative to its container, centers its content, and sets a specific font size, border radius, and border. */
+    position: relative;
+    justify-content: center;
+    
+   
+    font-size: 6vmin;
+    border-radius: 90px;
+    border: 0px;
+}
+
+.RandomButton {
+    font-size: 60px;
+    background-color: rgb(225, 225, 225,0);
+    border: 0px;
+    cursor: pointer;
+    font-weight: 300;
+}

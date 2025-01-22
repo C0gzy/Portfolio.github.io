@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --Background: #202027;
   --BackgroundHighlight: #383843;
@@ -56,7 +60,7 @@
   align-items: center;
   
   height: 10vh;
-  width: 100vw;
+  width: 100%;
   min-width: 380px;
   left: 0%;
   top: 0%;
@@ -98,6 +102,15 @@
   align-items: center;
   height: 90vh;
 
+}
+
+.ProjectTextTitle {
+  text-align: center;
+  font-size: 100px;
+  line-height: 0%;
+  margin: 5%;
+  color: #d2d2d2;
+  
 }
 
 .TopSectionText {
@@ -152,7 +165,7 @@
 
 .TechRow {
   display: grid;
-  grid-template-columns: repeat(3,  minmax(10rem, 1fr));
+  grid-template-columns: repeat(4,  minmax(10rem, 1fr));
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -162,6 +175,7 @@
   display: flex;
   align-items: center;
   background-color: var(--BackgroundHighlight);
+  border: var(--BackgroundHighlight) .1px solid;
   border-radius: 10px;
   padding: 10px;
   font-size: 20px;
@@ -196,4 +210,65 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (max-width: 992px) {
+  .ProjectTextTitle {
+      font-size: 50px;
+  }
+
+  .Gifimg {
+    width: 40%;
+  }
+
+
+}
+@media screen and (max-width: 600px) {
+  .Gifimg {
+    width: 100%;
+  }
+
+  .TechRow {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+  }
+
+  #ProjectSquare {
+      height: 70vh;
+  }
+
+  .TechSquare {
+      font-size: 12px;
+  }
+
+  .TopBar {
+      font-size: 40px;
+  }
+
+  .TopBar-Right {
+      width: 30vw;
+  }
+
+  .TopSectionDesc {
+      width: 100%;
+      font-size: 20px;
+  }
+
+  .TopSection {
+      height: 65vh;
+  }
+
+  .grid-container {
+      
+  }
+
+  .ProjectText {
+      font-size: 10px;
+  }
+
+  .ImageDesc {
+      max-height: 100px;
+  }
+
+  
 }

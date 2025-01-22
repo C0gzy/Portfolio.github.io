@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "jsx": "preserve",
+    "target": "es2016",                                 
+    "module": "commonjs",                               
+    "esModuleInterop": true,                             
+  
+    "forceConsistentCasingInFileNames": true,            
+
+    "skipLibCheck": true        
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],     
+}

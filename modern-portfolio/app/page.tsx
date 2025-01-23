@@ -65,7 +65,7 @@ export default function Portfolio() {
       image: "/project/plycs.png",
       imageWidth: 500,
       imageHeight: 500,
-      tags: ["NodeJS", "HTML", "CSS", "JavaScript"],
+      tags: ["NextJS", "Tailwind", "React", "CSS"],
       link: "https://plycs.com"
     },
     {
@@ -84,7 +84,7 @@ export default function Portfolio() {
       imageWidth: 500,
       imageHeight: 500,
       tags: ["NodeJS", "HTML", "CSS", "JSON", "JavaScript"],
-      link: "#"
+      link: "/SubWebs/Comp1004WebsiteProject/index.html"
     },
     {
       title: "Green M&M",
@@ -119,7 +119,7 @@ export default function Portfolio() {
           </p>
           <div className="flex md:flex-row flex-col justify-center gap-4 pt-4">
             <Button size="lg" variant="destructive" asChild className="bg-blue-600 hover:bg-blue-800">
-              <Link href="#"><LinkIcon className="mr-2 h-4 w-4" /> My Resume</Link>
+              <Link href='/Tom_CV2025.pdf'><LinkIcon className="mr-2 h-4 w-4" /> My Resume</Link>
             </Button>
             <Button size="lg" variant="secondary" asChild>
               <Link href="https://github.com/C0gzy"><Github className="mr-2 h-4 w-4" /> GitHub</Link>

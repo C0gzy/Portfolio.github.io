@@ -9,6 +9,8 @@ import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/comp
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 
+import { Footer } from '@/components/footer'
+
 export default function Portfolio() {
   const technologies = [
     { 
@@ -101,16 +103,16 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20">
+      <section className="container mx-auto px-4 py-20 pt-40">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center space-y-6"
         >
-          <div className="text-8xl font-bold mb-8">
-            <span className="text-white">&lt;TC&gt;</span>
-          </div>
+          
+
+          <Image src="Tom.jpeg" alt="Tom Pfp Pic" className="w-64 h-64 rounded-full mb-4 justify-self-center"  width={500} height={1000}/>
           <h1 className="text-2xl font-bold max-w-3xl mx-auto">
             Hello, I'm Tom Cogzell and I'm currently a Student at the University of Plymouth studying software Engineering.
           </h1>
@@ -220,6 +222,7 @@ export default function Portfolio() {
           </div>
         </motion.div>
       </section>
+      <Footer />
     </div>
   )
 }

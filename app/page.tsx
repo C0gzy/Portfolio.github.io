@@ -112,7 +112,7 @@ export default function Portfolio() {
         >
           
 
-          <Image src="Tom.jpeg" alt="Tom Pfp Pic" className="w-64 h-64 rounded-full mb-4 justify-self-center"  width={500} height={1000}/>
+          <Image src="Tom.jpeg" alt="Tom Pfp Pic" className="w-64 h-64 rounded-full mb-4 mx-auto"  width={500} height={1000}/>
           <h1 className="text-2xl font-bold max-w-3xl mx-auto">
             Hello, I'm Tom Cogzell and I'm currently a Student at the University of Plymouth studying software Engineering.
           </h1>

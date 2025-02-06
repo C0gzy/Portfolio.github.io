@@ -71,6 +71,15 @@ export default function Portfolio() {
       link: "https://plycs.com"
     },
     {
+      title: "World wide tax calculator",
+      description: "A tax calculator that allows you to calculate your tax in most countries. Features a interactable globe and Tax News",
+      image: "/project/TaxCalc.png",
+      imageWidth: 500,
+      imageHeight: 500,
+      tags: ["NextJS", "Tailwind", "React","TypeScript"],
+      link: "https://tax-app-rho.vercel.app/"    
+    },
+    {
       title: "PicFlick",
       description: "An App for IOS and Android that allows you to swipe through your camera roll and delete or keep your photos in an easy way",
       image: "/project/PicFlick.webp",

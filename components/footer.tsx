@@ -7,7 +7,7 @@ export function Footer() {
     return (
         <footer className="bg-gray-900  text-white p-4 mt-20 text-center">
             <p>&copy; 2025 Tom Cogell Portfolio</p>
-            <section className="flex mb:flex-row flex-col justify-center">
+            <section className="flex md:flex-row flex-col justify-center">
             <Card className="bg-gray-900 border-gray-900">
                 <CardHeader>
                     <CardTitle className="text-white">Contact</CardTitle>

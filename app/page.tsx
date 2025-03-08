@@ -1,13 +1,20 @@
 'use client'
 
 import { motion } from "framer-motion"
-import { Github, Linkedin, LinkIcon } from 'lucide-react'
+import { Github, Linkedin, LinkIcon, ChevronLeft, ChevronRight } from 'lucide-react'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 import { Footer } from '@/components/footer'
 
@@ -62,65 +69,99 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: "Meowzie",
+      description: "A website and Social App to share cat videos. Donations given to the site are passed on to cat charities. You can upload videos , comment and share with your friends.",
+      media: [
+        { type: "video", src: "/project/meowzie/Demo.mov" },
+        { type: "image", src: "/project/meowzie/Main.png", width: 500, height: 500 },
+        { type: "image", src: "/project/meowzie/SShot1.png", width: 500, height: 500 },
+        { type: "image", src: "/project/meowzie/SShot2.png", width: 500, height: 500 }
+      ],
+      tags: ["NextJS", "Tailwind", "React", "TypeScript", "Firebase","React Native"],
+      link: "https://meowzie.co.uk"
+    },
+    {
       title: "Plycs.com",
       description: "Made for the University of Plymouth Computer Science Society. It features searchable events, contact pages and CSS animations",
-      image: "/project/plycs.png",
-      imageWidth: 500,
-      imageHeight: 500,
+      media: [
+        { type: "image", src: "/project/plycs.png", width: 500, height: 500 }
+      ],
       tags: ["NextJS", "Tailwind", "React", "CSS"],
       link: "https://plycs.com"
     },
     {
       title: "World wide tax calculator",
       description: "A tax calculator that allows you to calculate your tax in most countries. Features a interactable globe and Tax News",
-      image: "/project/TaxCalc.png",
-      imageWidth: 500,
-      imageHeight: 500,
+      media: [
+        { type: "image", src: "/project/TaxCalc.png", width: 500, height: 500 }
+      ],
       tags: ["NextJS", "Tailwind", "React","TypeScript"],
       link: "https://tax-app-rho.vercel.app/"    
     },
     {
       title: "PicFlick",
       description: "An App for IOS and Android that allows you to swipe through your camera roll and delete or keep your photos in an easy way",
-      image: "/project/PicFlick.webp",
-      imageWidth: 500,
-      imageHeight: 500,
+      media: [
+        { type: "image", src: "/project/PicFlick.webp", width: 500, height: 500 }
+      ],
       tags: ["React", "React Native", "Expo"],
       link: "https://github.com/C0gzy/SwipeDeleteProject"
     },
     {
       title: "Top Horror",
       description: "Made for my University End of year project. The website has a searchable list of 10,000 horror films from indie to high budget to help users find the perfect film to watch that night.",
-      image: "/project/TopHorror.png",
-      imageWidth: 500,
-      imageHeight: 500,
+      media: [
+        { type: "image", src: "/project/TopHorror.png", width: 500, height: 500 }
+      ],
       tags: ["NodeJS", "HTML", "CSS", "JSON", "JavaScript"],
       link: "/SubWebs/Comp1004WebsiteProject/index.html"
     },
     {
       title: "Green M&M",
       description: "A Python Discord Bot. Built to Download and play Music/Videos From Youtube. The Project is free and Open-Source at my GitHub page. Currently it supports video queues, Video Descriptions.",
-      image: "/project/Disc.png",
-      imageWidth: 300,
-      imageHeight: 300,
+      media: [
+        { type: "image", src: "/project/Disc.png", width: 300, height: 300 }
+      ],
       tags: ["Python", "Discord.py"],
       link: "https://github.com/C0gzy/GreenM-M"
     },
-    
   ]
 
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 pt-40">
+      {/* Hero Section with Background Animation */}
+      <section className="container mx-auto px-4 py-20 pt-40 relative overflow-hidden">
+        {/* Background Animation */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-gray-950 to-gray-950"></div>
+          </div>
+          {Array.from({ length: 20 }).map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute h-2 w-2 rounded-full bg-blue-500/30"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                scale: [1, 1.5, 1],
+                opacity: [0.3, 0.8, 0.3],
+              }}
+              transition={{
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 5,
+              }}
+            />
+          ))}
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center space-y-6"
+          className="text-center space-y-6 relative z-10"
         >
-          
-
           <Image src="Tom.jpeg" alt="Tom Pfp Pic" className="w-64 h-64 rounded-full mb-4 mx-auto"  width={500} height={1000}/>
           <h1 className="text-2xl font-bold max-w-3xl mx-auto">
             Hello, I'm Tom Cogzell and I'm currently a Student at the University of Plymouth studying software Engineering.
@@ -201,14 +242,39 @@ export default function Portfolio() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="relative w-full h-56 mb-4 rounded-lg overflow-hidden">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        width={project.imageWidth}
-                        height={project.imageHeight}
-                        className="object-cover"
-                      />
+                    <div className="w-full mb-4">
+                      <Carousel className="w-full">
+                        <CarouselContent>
+                          {project.media.map((mediaItem, index) => (
+                            <CarouselItem key={index}>
+                              <div className="relative w-full h-56 rounded-lg overflow-hidden">
+                                {mediaItem.type === "image" ? (
+                                  <Image
+                                    src={mediaItem.src}
+                                    alt={`${project.title} - Image ${index + 1}`}
+                                    width={mediaItem.width || 500}
+                                    height={mediaItem.height || 500}
+                                    className="object-contain w-full h-full"
+                                  />
+                                ) : mediaItem.type === "video" ? (
+                                  <video
+                                    src={mediaItem.src}
+                                    className="w-full h-full object-Contain"
+                                    controls
+                                    muted
+                                  />
+                                ) : null}
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        {project.media.length > 1 && (
+                          <>
+                            <CarouselPrevious className="left-2" />
+                            <CarouselNext className="right-2" />
+                          </>
+                        )}
+                      </Carousel>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
@@ -235,4 +301,3 @@ export default function Portfolio() {
     </div>
   )
 }
-

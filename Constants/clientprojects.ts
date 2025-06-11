@@ -9,7 +9,7 @@ interface Project {
     height?: number;
   }[];
   tags: string[];
-  link: string;
+  link: { linkName: string; link: string }[];
 }
 
 export const clientprojectsData: Project[] = [
@@ -21,7 +21,7 @@ export const clientprojectsData: Project[] = [
           { type: "image", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3-DwEhT9fw0skmEXPglo6EH1qcQeP3Aypq2yFFYStw-w4BUos6pOhC3L5e0bWrdCypg&usqp=CAU", width: 500, height: 50 },
         ],
         tags: ["Python"],
-        link: "https://torbridgecapital.co.uk/"
+        link: [{ linkName: "Company Website", link: "https://torbridgecapital.co.uk/" }],
       },
     ]
 

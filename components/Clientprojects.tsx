@@ -86,11 +86,13 @@ export function Clientprojects() {
                   </div>
                 </CardContent>
                 <CardFooter className="mt-auto">
+                {project.link.map((link , index) => (
                   <Button className="bg-blue-600 hover:bg-blue-800" asChild>
-                    <Link href={project.link} target="_blank">
-                      <LinkIcon className="mr-2 h-4 w-4" /> View Project
-                    </Link>
-                  </Button>
+                      <Link href={link.link} target="_blank" key={index}>
+                        <LinkIcon className="mr-2 h-4 w-4" /> {link.linkName}
+                      </Link>
+                    </Button>
+                  ))}
                 </CardFooter>
               </Card>
             </motion.div>

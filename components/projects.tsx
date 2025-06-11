@@ -27,22 +27,23 @@ export function Projects() {
         className="space-y-12"
       >
         <h2 className="text-5xl md:text-7xl font-bold text-center mb-12">Projects</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 auto-rows-fr">
           {projectsData.map((project) => (
             <motion.div
               key={project.title}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.2 }}
+              className="h-full"
             >
-              <Card className="bg-gray-900 border-gray-800">
-                <CardHeader>
+              <Card className="bg-gray-900 border-gray-800 flex flex-col h-full">
+                <CardHeader className="flex-shrink-0">
                   <CardTitle className="text-white">{project.title}</CardTitle>
                   <CardDescription className="text-gray-400">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="w-full mb-4">
+                <CardContent className="flex-grow flex flex-col">
+                  <div className="w-full mb-4 flex-shrink-0">
                     <Carousel className="w-full">
                       <CarouselContent>
                         {project.media.map((mediaItem, index) => (
@@ -76,7 +77,7 @@ export function Projects() {
                       )}
                     </Carousel>
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mt-auto pt-4">
                     {project.tags.map((tag) => (
                       <Badge key={tag} variant="secondary">
                         {tag}
@@ -84,7 +85,7 @@ export function Projects() {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="mt-auto">
                   <Button className="bg-blue-600 hover:bg-blue-800" asChild>
                     <Link href={project.link} target="_blank">
                       <LinkIcon className="mr-2 h-4 w-4" /> View Project

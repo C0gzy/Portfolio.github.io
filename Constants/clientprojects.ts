@@ -23,5 +23,14 @@ export const clientprojectsData: Project[] = [
         tags: ["Python"],
         link: [{ linkName: "Company Website", link: "https://torbridgecapital.co.uk/" }],
       },
+      {
+        title: "IOT Manager",
+        description: "IOT Manager is a project that I created for my 2nd year Group project for a Client and company named 'FarFields' . It is a web application that allows you to manage your IOT devices. It is a web/IOS/Android application that allows you to manage your IOT devices.",
+        media: [
+          { type: "image", src: "/project/IotLogo.png", width: 500, height: 50 },
+        ],
+        tags: ["ReactNative", "Expo", "NodeJS", "CSS", "Firebase"],
+        link: [{ linkName: "Client Website", link: "https://www.farfields.net/" }],
+      }
     ]
 

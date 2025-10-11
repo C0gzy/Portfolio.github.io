@@ -5,6 +5,7 @@ import { Technologies } from '@/components/technologies'
 import { Projects } from '@/components/projects'
 import { Clientprojects } from '@/components/Clientprojects'
 
+
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">

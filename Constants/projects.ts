@@ -22,7 +22,7 @@ export const projectsData: Project[] = [
           { type: "image", src: "/project/meowzie/SShot2.png", width: 500, height: 500 }
         ],
         tags: ["NextJS", "Tailwind", "React", "TypeScript", "Firebase","React Native"],
-        link: [{ linkName: "View Project", link: "https://meowzie.co.uk" },{ linkName: "Website Source Code", link: "https://github.com/C0gzy/MeowzieWebsite" }]
+        link: [{ linkName: "View Project", link: "https://meowzie.co.uk" },{ linkName: "Web Source Code", link: "https://github.com/C0gzy/MeowzieWebsite" }]
       },
       {
         title: "Plycs.com",

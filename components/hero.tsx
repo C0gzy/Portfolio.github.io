@@ -5,15 +5,17 @@ import { Github, Linkedin, FileText, ArrowDown } from 'lucide-react'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { Waves } from "./ui/wave-background"
 
 export function Hero() {
   return (
-    <section id="home" className="container mx-auto px-4 py-20 pt-32 sm:pt-40 relative">
+    <section id="home" className=" px-4 py-20 pt-32 sm:pt-40 relative z-10">
+       <Waves className="w-full h-full" />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center space-y-8 max-w-4xl mx-auto"
+        className="text-center space-y-8 max-w-4xl mx-auto relative z-10"
       >
         {/* Profile Image */}
         <motion.div 
@@ -68,7 +70,7 @@ export function Hero() {
         >
           This website is a brief showcase of what I've worked on and what I'm currently working on.
         </motion.p>
-
+          
         {/* CTA Buttons */}
         <motion.div 
           className="flex flex-col sm:flex-row justify-center gap-4 pt-6"
@@ -109,6 +111,8 @@ export function Hero() {
           </a>
         </motion.div>
       </motion.div>
+
+     
     </section>
   )
 }

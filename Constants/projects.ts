@@ -22,7 +22,7 @@ export const projectsData: Project[] = [
           { type: "image", src: "/project/meowzie/SShot2.png", width: 500, height: 500 }
         ],
         tags: ["NextJS", "Tailwind", "React", "TypeScript", "Firebase","React Native"],
-        link: [{ linkName: "View Project", link: "https://meowzie.co.uk" },{ linkName: "Web Source Code", link: "https://github.com/C0gzy/MeowzieWebsite" }]
+        link: [{ linkName: "Visit Website", link: "https://meowzie.co.uk" },{ linkName: "Web Source Code", link: "https://github.com/C0gzy/MeowzieWebsite" }]
       },
       {
         title: "Plycs.com",
@@ -31,7 +31,7 @@ export const projectsData: Project[] = [
           { type: "image", src: "/project/plycs.png", width: 500, height: 500 }
         ],
         tags: ["NextJS", "Tailwind", "React", "CSS"],
-        link: [{ linkName: "View Project", link: "https://plycs.com" }]
+        link: [{ linkName: "Visit Website", link: "https://plycs.com" }]
       },
       {
         title: "World wide tax calculator",
@@ -40,7 +40,7 @@ export const projectsData: Project[] = [
           { type: "image", src: "/project/TaxCalc.png", width: 500, height: 500 }
         ],
         tags: ["NextJS", "Tailwind", "React","TypeScript"],
-        link: [{ linkName: "View Project", link: "https://tax-app-rho.vercel.app/" }]    
+        link: [{ linkName: "Visit Website", link: "https://tax-app-rho.vercel.app/" }]    
       },
       {
         title: "PicFlick",

@@ -53,32 +53,60 @@ export function Technologies() {
   ]
 
   return (
-    <section className="container mx-auto px-4 py-20">
+    <section id="technologies" className="container mx-auto px-4 py-20 sm:py-24">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
         className="space-y-12"
       >
-        <h2 className="text-5xl font-bold text-center mb-12 md:text-7xl ">Technologies</h2>
-        <p className="text-gray-400 text-center text-xl mb-12">
-          These are the main Technologies I use to create my projects and that I'm most proficient in
-        </p>
-        <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 md:gap-8 gap-4">
+        <div className="text-center mb-16">
+          <motion.h2 
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-accent">Technologies</span> I Use
+          </motion.h2>
+          <motion.p 
+            className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            The main technologies I use to create my projects and that I'm most proficient in
+          </motion.p>
+        </div>
+
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
           <TooltipProvider>
-            {technologies.map((tech) => (
+            {technologies.map((tech, index) => (
               <Tooltip key={tech.name}>
                 <TooltipTrigger asChild>
                   <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="flex flex-col items-center md:p-6 p-3 bg-gray-900 rounded-xl cursor-pointer"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    className="flex flex-col items-center p-4 sm:p-6 bg-card rounded-xl cursor-pointer border-2 border-transparent hover:border-accent/30 transition-all duration-300 group"
                   >
-                    <img src={tech.icon} alt={tech.name} className="md:w-16 md:h-16 w-8 h-8 md:mb-4 mb-2" />
-                    <h3 className="text-lg font-semibold">{tech.name}</h3>
+                    <img 
+                      src={tech.icon} 
+                      alt={tech.name} 
+                      className="w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4 transition-transform group-hover:scale-110" 
+                    />
+                    <h3 className="text-sm sm:text-base font-semibold text-center group-hover:text-accent transition-colors">
+                      {tech.name}
+                    </h3>
                   </motion.div>
                 </TooltipTrigger>
-                <TooltipContent className="bg-gray-800 border-gray-800 text-white p-2 rounded-md">
-                  <p>{tech.description}</p>
+                <TooltipContent className="p-3 rounded-lg max-w-xs">
+                  <p className="text-sm">{tech.description}</p>
                 </TooltipContent>
               </Tooltip>
             ))}

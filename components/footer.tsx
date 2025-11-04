@@ -1,42 +1,64 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import Link from "next/link"
-import { Github, Linkedin, LinkIcon } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 
 export function Footer() {
     return (
-        <footer className="bg-gray-900  text-white p-4 mt-20 text-center">
-            <p>&copy; 2025 Tom Cogell Portfolio</p>
-            <section className="flex md:flex-row flex-col justify-center">
-            <Card className="bg-gray-900 border-gray-900">
-                <CardHeader>
-                    <CardTitle className="text-white">Contact</CardTitle>
-                    <CardDescription className="text-gray-400">
-                        You can contact me at tomcogzell8@gmail.com
-                    </CardDescription>
-                </CardHeader>
-            </Card>
-            <Card className="bg-gray-900 border-gray-900">
-                <CardHeader>
-                    <CardTitle className="text-white">Social</CardTitle>
-                    <CardDescription className="text-gray-400">
-                        You can find me on Github and LinkedIn
-                    </CardDescription>
-                    <CardContent className="flex justify-center gap-1"> 
-                        <Button className="bg-blue-600 hover:bg-blue-800" asChild>
-                        <Link href="https://github.com/C0gzy">
-                            <Github /> 
-                        </Link>
-                        </Button>
-                        <Button className="bg-blue-600 hover:bg-blue-800" asChild>
-                        <Link href="https://www.linkedin.com/in/tom-cogzell-1b8b931b2/">
-                            <Linkedin />
-                        </Link>
-                        </Button>
-                    </CardContent>
-                </CardHeader>
-            </Card>
-            </section>
+        <footer id="contact" className="bg-background text-foreground py-20 mt-20 border-t border-border">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <Card className="border-2 hover:border-accent/30 transition-colors">
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                                <Mail className="h-5 w-5 text-accent" />
+                                Contact
+                            </CardTitle>
+                            <CardDescription className="text-muted-foreground text-base">
+                                Get in touch with me
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <a 
+                                href="mailto:tomcogzell8@gmail.com" 
+                                className="text-accent hover:underline font-medium"
+                            >
+                                tomcogzell8@gmail.com
+                            </a>
+                        </CardContent>
+                    </Card>
+                    
+                    <Card className="border-2 hover:border-accent/30 transition-colors">
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                                <Github className="h-5 w-5 text-accent" />
+                                Social
+                            </CardTitle>
+                            <CardDescription className="text-muted-foreground text-base">
+                                Connect with me on social media
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent className="flex flex-wrap gap-2"> 
+                            <Button size="smMaxRadius" variant="AccentGradient" asChild>
+                                <Link href="https://github.com/C0gzy" target="_blank">
+                                    <Github className="mr-2 h-4 w-4" /> 
+                                    GitHub
+                                </Link>
+                            </Button>
+                            <Button size="smMaxRadius" variant="AccentGradient" asChild>
+                                <Link href="https://www.linkedin.com/in/tom-cogzell-878bb22b2/" target="_blank">
+                                    <Linkedin className="mr-2 h-4 w-4" />
+                                    LinkedIn
+                                </Link>
+                            </Button>
+                        </CardContent>
+                    </Card>
+                </div>
+                
+                <div className="mt-12 text-center text-muted-foreground">
+                    <p>&copy; 2025 Tom Cogzell. All rights reserved.</p>
+                </div>
+            </div>
         </footer>  
     )
 }

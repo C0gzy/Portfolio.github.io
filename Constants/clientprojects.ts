@@ -14,6 +14,15 @@ interface Project {
 
 export const clientprojectsData: Project[] = [
     {
+      title: "PlymHack",
+      description: "PlymHack is a hackathon that I worked on in collabration with the University of Plymouth. I created the website for the hackathon that tracks the progress of the hackathon and allows you to view the projects and the teams.",
+      media: [
+        { type: "image", src: "/project/PlymHack.png", width: 500, height: 50 },
+      ],
+      tags: ["React", "Tailwind", "TypeScript"],
+      link: [{ linkName: "Visit Website", link: "https://plymhack.uk" }],
+    },
+    {
         title: "Torbridge Capital",
         description: 
         "I interned at Torbridge Capital where I created multiple scripts in Python that automate email service with APIendpoints which is projected to save 2+ hours every week. I learned a lot from the internship about making productionready and efficient code and how to create a program that suites the business’s needs.",

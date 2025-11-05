@@ -12,6 +12,18 @@ interface Project {
 }
 
 export const projectsData: Project[] = [
+  {
+    title: "OpenGrammer",
+    description : `A JavaScript npm package that scans text for grammar mistakes using custom rules and provides visual indicators with hover tooltips showing correction suggestions. 
+    Custom grammar rule engine for detecting common mistakes. 
+    Zero external dependencies (for core functionality). 
+    Easy integration into web projects, React, and TipTap editors. `,
+    media: [
+      { type: "image", src: "/project/OpenGrammer.png", width: 500, height: 500 }
+    ],
+    tags: ["JavaScript", "npm", "React", "TypeScript"],
+    link: [{ linkName: "Visit Website", link: "https://open-grammer.vercel.app/" }]
+  },
     {
         title: "Meowzie",
         description: "A website and Social App to share cat videos. Donations given to the site are passed on to cat charities. You can upload videos , comment and share with your friends.",
@@ -59,14 +71,5 @@ export const projectsData: Project[] = [
         ],
         tags: ["NodeJS", "HTML", "CSS", "JSON", "JavaScript"],
         link: [{ linkName: "View Project", link: "/SubWebs/Comp1004WebsiteProject/index.html" }]
-      },
-      {
-        title: "Green M&M",
-        description: "A Python Discord Bot. Built to Download and play Music/Videos From Youtube. The Project is free and Open-Source at my GitHub page. Currently it supports video queues, Video Descriptions.",
-        media: [
-          { type: "image", src: "/project/Disc.png", width: 300, height: 300 }
-        ],
-        tags: ["Python", "Discord.py"],
-        link: [{ linkName: "Source Code", link: "https://github.com/C0gzy/GreenM-M" }]
       },
     ]

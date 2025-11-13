@@ -84,13 +84,13 @@ export function Hero() {
               View Resume
             </Link>
           </Button>
-          <Button size="lg" variant="outline" asChild>
+          <Button size="lgMaxRadius" variant="outlineGradient" asChild>
             <Link href="https://github.com/C0gzy" target="_blank">
               <Github className="mr-2 h-4 w-4" /> 
               GitHub
             </Link>
           </Button>
-          <Button size="lg" variant="outline" asChild>
+          <Button size="lgMaxRadius" variant="outlineGradient" asChild>
             <Link href="https://www.linkedin.com/in/tom-cogzell-878bb22b2/" target="_blank">
               <Linkedin className="mr-2 h-4 w-4" /> 
               LinkedIn

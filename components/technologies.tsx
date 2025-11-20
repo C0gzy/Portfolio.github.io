@@ -20,6 +20,21 @@ export function Technologies() {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       description: "Dynamic programming language for web development"
     },
+    {
+      name: "TypeScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      description: "Statically typed superset of JavaScript that adds optional type annotations"
+    },
+    {
+      name: "Docker",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      description: "Containerization platform for building, shipping, and running applications"
+    },
+    {
+      name: "MongoDB",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      description: "NoSQL database for flexible data storage"
+    },
     { 
       name: "C#", 
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
@@ -93,7 +108,7 @@ export function Technologies() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
                     whileHover={{ scale: 1.1, y: -5 }}
-                    className="flex flex-col items-center p-4 sm:p-6 bg-card rounded-xl cursor-pointer border-2 border-transparent hover:border-accent/30 transition-all duration-300 group"
+                    className="flex flex-col items-center p-4 sm:p-6 bg-card rounded-xl cursor-pointer border-2 border-transparent hover:shadow-xl hover:shadow-accent/40 hover:border-accent/30 transition-all duration-300 group"
                   >
                     <img 
                       src={tech.icon} 

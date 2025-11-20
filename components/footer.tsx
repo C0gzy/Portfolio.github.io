@@ -5,10 +5,10 @@ import { Github, Linkedin, Mail } from 'lucide-react'
 
 export function Footer() {
     return (
-        <footer id="contact" className="bg-background text-foreground py-20 mt-20 border-t border-border">
+        <footer id="contact" className="bg-background text-foreground py-10 mt-20 border-t border-border">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <Card className="border-2 hover:border-accent/30 transition-colors">
+                    <Card className="bg-card/50 backdrop-blur-sm border-accent/10 hover:border-accent/30 hover:shadow-lg transition-all duration-300">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Mail className="h-5 w-5 text-accent" />
@@ -28,7 +28,7 @@ export function Footer() {
                         </CardContent>
                     </Card>
                     
-                    <Card className="border-2 hover:border-accent/30 transition-colors">
+                    <Card className="bg-card/50 backdrop-blur-sm border-accent/10 hover:border-accent/30 hover:shadow-lg transition-all duration-300">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Github className="h-5 w-5 text-accent" />
@@ -54,10 +54,7 @@ export function Footer() {
                         </CardContent>
                     </Card>
                 </div>
-                
-                <div className="mt-12 text-center text-muted-foreground">
-                    <p>&copy; 2025 Tom Cogzell. All rights reserved.</p>
-                </div>
+            
             </div>
         </footer>  
     )

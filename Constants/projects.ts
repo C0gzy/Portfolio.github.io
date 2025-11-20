@@ -1,17 +1,7 @@
-interface Project {
-  title: string;
-  description: string;
-  media: {
-    type: "image" | "video";
-    src: string;
-    width?: number;
-    height?: number;
-  }[];
-  tags: string[];
-  link: { linkName: string; link: string }[];
-}
+import { type Project } from "@/lib/types"
 
 export const projectsData: Project[] = [
+
   {
     title: "OpenGrammer",
     description : `A JavaScript npm package that scans text for grammar mistakes using custom rules and provides visual indicators with hover tooltips showing correction suggestions. 
@@ -24,6 +14,7 @@ export const projectsData: Project[] = [
     tags: ["JavaScript", "npm", "React", "TypeScript"],
     link: [{ linkName: "Visit Website", link: "https://open-grammer.vercel.app/" }]
   },
+
     {
         title: "Meowzie",
         description: "A website and Social App to share cat videos. Donations given to the site are passed on to cat charities. You can upload videos , comment and share with your friends.",
@@ -73,3 +64,20 @@ export const projectsData: Project[] = [
         link: [{ linkName: "View Project", link: "/SubWebs/Comp1004WebsiteProject/index.html" }]
       },
     ]
+
+/*
+
+
+  {
+    title: "lexly Alpha",
+    description: "Lexly is a AI powered Word Processor built on top of OpenGrammer package that allows you to write with AI. You can analyse rubrics and get feedback on your writing. This is hasnt been released yet as there is still much to do however i wanted to show it off as it is a project i am proud of.",
+    media: [
+      { type: "video", src: "/project/lexly/Demo.mp4" },
+      { type: "image", src: "/project/lexly/editor.png", width: 500, height: 500 },
+      { type: "image", src: "/project/lexly/home.png", width: 500, height: 500 }
+    ],
+    tags: ["React", "Tailwind", "TypeScript", "Python", "Nodejs"],
+    link: []
+  },
+    */
+

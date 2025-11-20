@@ -19,7 +19,7 @@ const buttonVariants = cva(
         outlineAccent:
           "border-2 border-accent bg-background hover:bg-accent/30 hover:text-foreground",
         AccentGradient:
-          "bg-gradient-to-t border-2 border-accent from-accent via-accent/60 to-background text-accent-foreground hover:from-accent/50 hover:to-accent/70",
+          "bg-gradient-to-t border-2 border-accent from-accent via-accent/60 to-background text-accent-foreground hover:from-accent/50 hover:to-accent/60 shadow-accent/25 hover:shadow-xl hover:shadow-accent/40 hover:-translate-y-0.5 hover:scale-[1.02] transition-all duration-300",
         /* Blue highlight secondary button */
         secondary:
           "bg-accent text-accent-foreground hover:bg-accent/90",

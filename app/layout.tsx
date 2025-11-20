@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { GrainOverlay } from '@/components/ui/grain-overlay'
 import { PostHogProvider } from '../components/PostHogProvider'
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
       </head>
       <body>
         <PostHogProvider>
+          <GrainOverlay />
           {children}
         </PostHogProvider>
       </body>

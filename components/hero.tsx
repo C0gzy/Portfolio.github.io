@@ -9,8 +9,12 @@ import { Waves } from "./ui/wave-background"
 
 export function Hero() {
   return (
-    <section id="home" className=" px-4 py-20 pt-32 sm:pt-40 relative z-10">
-       <Waves className="w-full h-full" />
+    <section id="home" className="px-4 py-20 pt-32 sm:pt-40 relative z-10 overflow-hidden">
+       <Waves className="w-full h-full absolute inset-0 z-0" />
+       
+       {/* Background Gradient Blob */}
+       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/20 rounded-full blur-[120px] -z-10 pointer-events-none" />
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -42,15 +46,17 @@ export function Hero() {
           />
         </motion.div>
 
-        {/* Heading */}
         <motion.h1 
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-tight"
+          className="text-4xl sm:text-5xl md:text-7xl font-bold text-foreground leading-tight tracking-tighter"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           Hello, I'm{' '}
-          <span className="text-accent">Tom Cogzell</span>
+          <span className="text-accent relative inline-block">
+            Tom Cogzell
+            <span className="absolute -bottom-2 left-0 w-full h-1 bg-accent/50 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+          </span>
         </motion.h1>
 
         <motion.p 

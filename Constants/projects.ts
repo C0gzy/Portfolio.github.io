@@ -3,6 +3,17 @@ import { type Project } from "@/lib/types"
 export const projectsData: Project[] = [
 
   {
+    title: "ErrorMail",
+    description: "A tool to help developers debug their code by sending them an email with the error message and the stack trace. It also provides a code snippet to help the developer fix the error.",
+    media: [
+      { type: "image", src: "/project/ErrorMail/main1.png", width: 500, height: 500 },
+      { type: "image", src: "/project/ErrorMail/main2.png", width: 500, height: 500 }
+    ],
+    tags: ["React", "Tailwind", "TypeScript", "Node.js", "Express", 'NextJS' , 'Docker' , 'NPM' , 'SQLlite'],
+    link: [{ linkName: "Visit Website", link: "https://errormail.online/" } , { linkName: 'NPM Package', link: 'https://www.npmjs.com/package/errormail'}]
+  },
+
+  {
     title: "OpenGrammer",
     description : `A JavaScript npm package that scans text for grammar mistakes using custom rules and provides visual indicators with hover tooltips showing correction suggestions. 
     Custom grammar rule engine for detecting common mistakes. 
@@ -29,12 +40,12 @@ export const projectsData: Project[] = [
       },
       {
         title: "Plycs.com",
-        description: "Made for the University of Plymouth Computer Science Society. It features searchable events, contact pages and CSS animations",
+        description: "[Unavaible due to current shift in ownership] Made for the University of Plymouth Computer Science Society. It features searchable events, contact pages and CSS animations",
         media: [
           { type: "image", src: "/project/plycs.png", width: 500, height: 500 }
         ],
         tags: ["NextJS", "Tailwind", "React", "CSS"],
-        link: [{ linkName: "Visit Website", link: "https://plycs.com" }]
+        link: []
       },
       {
         title: "World wide tax calculator",
